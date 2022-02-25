@@ -5,7 +5,7 @@ export const fetchCartData = () => {
   return async (dispatch) => {
     const fetchData = async () => {
       const response = await fetch(
-        'https://redux-cart-a182c-default-rtdb.firebaseio.com/cart.json'
+        'your_database_url'
       );
 
       if (!response.ok) {
@@ -49,7 +49,7 @@ export const sendCartData = (cart) => {
 
     const sendRequest = async () => {
       const response = await fetch(
-        'https://redux-cart-a182c-default-rtdb.firebaseio.com/cart.json',
+        'your database url',
         {
           method: 'PUT',
           body: JSON.stringify({
